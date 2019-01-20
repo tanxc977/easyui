@@ -1,0 +1,8 @@
+drop table if exists prog_info;
+CREATE TABLE prog_info(
+	 seq_no int not null auto_increment,
+	 author  varchar(32),
+   prog_desc varchar(32),
+   prog_name char(8),
+   PRIMARY key(seq_no)
+)ENGINE=INNODB,DEFAULT CHARSET=utf8;
