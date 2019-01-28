@@ -21,6 +21,7 @@
         <th field="cb" checkbox="true" align="center"></th>
         <th field="author" width="30" align="center">作者</th>
         <th field="progName" width="60" align="center">程序名</th>
+        <th field="confirmFlag" width="20" align="center" data-options="formatter:unitformatter">复核标志</th>
         <th field="progDesc" width="200" align="center">描述</th>
 
 
@@ -57,6 +58,12 @@
                 <td>程序名：</td>
                 <td>
                     <input type="text" id="progName" name="progName" class="easyui-validatebox" required="true" />
+                </td>
+            </tr>
+            <tr>
+                <td>复核标志：</td>
+                <td>
+                    <input type="text" id="confirmFlag" name="confirmFlag" class="easyui-combobox" required="true" />
                 </td>
             </tr>
             <tr>

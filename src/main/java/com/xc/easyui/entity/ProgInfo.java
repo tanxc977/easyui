@@ -19,8 +19,17 @@ public class ProgInfo {
     private String author;
     private String progDesc;
     private String progName;
+    private String confirmFlag;
 
     public ProgInfo() {
+    }
+
+    public String getConfirmFlag() {
+        return confirmFlag;
+    }
+
+    public void setConfirmFlag(String confirmFlag) {
+        this.confirmFlag = confirmFlag;
     }
 
     public int getSeqNo() {

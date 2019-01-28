@@ -1,6 +1,15 @@
 /* 这个 url 经常要用到：add 中的 save，edit 中的 save，独立出来共享 */
 var url;
 
+
+$(function() {// 初始化内容
+    $("#confirmFlag").combobox({
+        data:ConfirmFlag,
+        valueField:'value',
+        textField:'text',
+        panelHeight:'auto'}
+    )
+});
 /* 1、添加用户 */
 function openLinkAddDialog() {
     $("#dlg").dialog("open").dialog("setTitle", "添加程序信息");
@@ -95,3 +104,24 @@ function searchWebSite() {
         "author": $("#s_author").val()
     });
 }
+
+var ConfirmFlag = [
+    { "value": "Y", "text": "复核通过" },
+    { "value": "N", "text": "复核剔退" },
+    { "value": "C", "text": "待复核" }
+    ]
+
+
+function unitformatter(value, rowData, rowIndex) {
+    if (value == "") {
+        return;
+    }
+
+    for (var i = 0; i < ConfirmFlag.length; i++) {
+        if (ConfirmFlag[i].value == value) {
+            return ConfirmFlag[i].text;
+        }
+    }
+}
+
+
